@@ -35,7 +35,7 @@ botonSalir.addEventListener('click', (e) => {
         sessionStorage.removeItem('usuario');
 
         // 2. Redireccionar
-        window.location.href = './pages/login.html';
+        window.location.href = './login.html';
 
         // Listo :)
       }
