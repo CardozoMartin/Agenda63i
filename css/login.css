@@ -51,8 +51,9 @@
     .comentarioMobil{
         display: block;
         text-align: center;
-        left: 100px;
+        left: 60px;
         top: 420px;
+        margin-bottom: 30px;
     }
     .comentarioMobil p{
         font-size: 0.8rem;
