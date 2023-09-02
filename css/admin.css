@@ -1,0 +1,23 @@
+/* Estilos para tarjetas en pantallas pequeñas (menos de 576px) */
+@media (max-width: 575.98px) {
+    .card {
+        width: 100%; /* Ocupar todo el ancho de la pantalla */
+        margin: 0 0 10px 0; /* Espaciado entre tarjetas */
+    }
+}
+
+/* Estilos para tarjetas en pantallas medianas (576px - 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .card {
+        width: 48%; /* Usar aproximadamente la mitad del ancho de la pantalla */
+        margin: 0 2% 10px 0; /* Espaciado entre tarjetas */
+    }
+}
+
+/* Estilos para tarjetas en pantallas grandes (992px o más) */
+@media (min-width: 992px) {
+    .card {
+        width: 31%; /* Usar aproximadamente un tercio del ancho de la pantalla */
+        margin: 0 1% 10px 0; /* Espaciado entre tarjetas */
+    }
+}
