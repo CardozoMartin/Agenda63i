@@ -6,11 +6,6 @@ const sectionContactos = document.getElementById('section-contactos');
 const alert = document.getElementById('alertResultado')
 
 
-const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
-if (!estaLogueado) {
-  // No deberia poder ver la página
-  window.location.href = './login.html';
-}
 
 
 contactos.forEach(element => {
