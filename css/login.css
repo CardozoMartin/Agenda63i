@@ -13,11 +13,31 @@
 
 .comentario{
     top: 220px;
+    z-index: 2;
 }
 .comentario p{
     font-weight: 700;
+    
 }
-
+.comentarioMobil{
+    display: none;
+}
+@media (max-width: 1200px) {
+   .comentario p {
+    font-size: 1.6rem;
+    font-weight: bolder;
+   }
+}
+@media (max-width: 991px) {
+    .comentario p {
+        
+     font-size: 0.8rem;
+     z-index: 3;
+    }
+    .comentario{
+        z-index: 1;
+    }
+ }
 @media (max-width: 576px) { 
     .loginSvg{
         display: none;
@@ -27,6 +47,15 @@
     width: 300px;
     height: 300px;
     top: 10px;
+    }
+    .comentarioMobil{
+        display: block;
+        text-align: center;
+        left: 100px;
+        top: 420px;
+    }
+    .comentarioMobil p{
+        font-size: 0.8rem;
     }
    
     #mobile{
