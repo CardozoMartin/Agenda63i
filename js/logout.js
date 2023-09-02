@@ -3,7 +3,7 @@
 // -----------------------------------------
 
 const botonSalir = document.getElementById('boton-salir');
-botonSalir.classList = "btn btn-danger"
+//botonSalir.classList = "btn btn-danger"
 
 // -----------------------------------------
 // 2. Mostrar u ocultar el boton
@@ -11,6 +11,7 @@ botonSalir.classList = "btn btn-danger"
 
 const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
 if (estaLogueado) {
+  botonSalir.classList = "btn btn-danger"
   botonSalir.classList.remove('d-none');
 }
 
@@ -34,7 +35,7 @@ botonSalir.addEventListener('click', (e) => {
         sessionStorage.removeItem('usuario');
 
         // 2. Redireccionar
-        window.location.href = '/';
+        window.location.href = './pages/login.html';
 
         // Listo :)
       }
