@@ -1,0 +1,43 @@
+.loginSvg{
+    
+    width: 500px;
+    height: 400px;
+    
+    
+}
+#mobile{
+    display: none;
+
+}
+#mobileSvg{display: none;}
+
+.comentario{
+    top: 220px;
+}
+.comentario p{
+    font-weight: 700;
+}
+
+@media (max-width: 576px) { 
+    .loginSvg{
+        display: none;
+    }
+    .loginMobile{
+        
+    width: 300px;
+    height: 300px;
+    top: 10px;
+    }
+   
+    #mobile{
+        display: block;
+    
+    }
+    #mobileSvg{display: block;}
+    #bienvenidoH1{
+        display: none;
+    }
+    .comentario{
+        display: none;
+    }
+}
