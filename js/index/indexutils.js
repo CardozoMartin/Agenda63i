@@ -1,6 +1,7 @@
 export const AgregarContactosAlSelect = (contacto) => {
     const selecContactos = document.getElementById('select-contactos');
-    const nombreContacto = document.createElement('option'); // Cambia 'value' a 'option'
+    const nombreContacto = document.createElement('option');
+    
     nombreContacto.innerText = contacto.nombre;
 
     selecContactos.appendChild(nombreContacto);

@@ -27,9 +27,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-primary-subtle">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">Agenda</a>
+          <a class="navbar-brand fw-medium" href="../index.html">Agenda</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,15 +44,15 @@
           <div class="collapse navbar-collapse" id="navbarAgenda">
             <ul class="navbar-nav mb-2 mb-lg-0 w-100">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link fw-medium" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active fw-medium" aria-current="page" href="#"
                   >Admin</a
                 >
               </li>
               <li class="nav-item ms-md-auto">
-                <button class="nav-link text-danger d-none" id="boton-salir">
+                <button class="nav-link  text-danger d-none" id="boton-salir">
                   Salir
                 </button>
               </li>
@@ -73,6 +73,9 @@
               type="text"
               id="input-nombre"
               class="form-control"
+              required
+              minlength="5"
+              maxlength="30"
             />
             <div class="invalid-feedback">Ingrese un nombre valido</div>
           </fieldset>
@@ -83,6 +86,10 @@
               type="text"
               id="input-numero"
               class="form-control"
+              required
+              minlength="10"
+              maxlength="12"
+              
             />
             <div class="invalid-feedback">Ingrese un numero valido</div>
           </fieldset>
@@ -93,6 +100,9 @@
               type="text"
               id="input-email"
               class="form-control"
+              required
+              minlength="10"
+              maxlength="40"
             />
             <div class="invalid-feedback">Ingrese un email valido</div>
           </fieldset>
@@ -103,12 +113,13 @@
               type="text"
               id="input-imagen"
               class="form-control"
+              required
             />
             <div class="invalid-feedback">Ingrese un enlace valido</div>
           </fieldset>
           <fieldset class="mb-2">
             <label for="input-notas" class="form-label">Notas (opcional)</label>
-            <textarea id="input-notas" class="form-control"></textarea>
+            <textarea id="input-notas" class="form-control" minlength="50" maxlength="250"></textarea>
           </fieldset>
           <div class="text-end mt-3">
             <button type="submit" class="btn btn-danger">Guardar</button>

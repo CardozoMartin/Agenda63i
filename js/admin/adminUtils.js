@@ -14,7 +14,7 @@ export const crearFilaTabla = (contacto, indice) => {
   const tbody = document.getElementById('tbody-contactos');
 
   const tr = document.createElement('tr');
-
+  tr.classList="fw-medium"
   // INDICE
 
   const tdIndice = document.createElement('td');

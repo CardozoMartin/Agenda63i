@@ -3,6 +3,7 @@
 // -----------------------------------------
 
 const botonSalir = document.getElementById('boton-salir');
+botonSalir.classList = "btn btn-danger"
 
 // -----------------------------------------
 // 2. Mostrar u ocultar el boton
