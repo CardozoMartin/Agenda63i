@@ -3,6 +3,7 @@ const body = document.querySelector('body')
 const nav = document.querySelector('nav')
 const a = document.querySelectorAll('a')
 const h1 = document.getElementById('bienvenidoH1')
+const h1mobil = document.querySelector('h1')
 const p = document.querySelectorAll('p')
 const h2 = document.querySelector('h2')
 const label = document.querySelectorAll('label')
@@ -52,6 +53,7 @@ btnDark.addEventListener('click', (e) => {
   h2.classList.toggle('text-light');
   articleDeInicio.classList.toggle('inicioDark');
   btnSesion.classList.toggle('btnColor')
+  h1mobil.classList.toggle('text-white')
   footer.classList.toggle("bg-dark");
 
 
