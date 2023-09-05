@@ -14,7 +14,7 @@ export const crearTarjetaDeContactos = (contacto)=>{
     
     //creamos la tarjeta
     const tarjetaDeContactos = document.createElement('div');
-    tarjetaDeContactos.classList = "col-sm-6 col-md-4 col-lg-3 card mb-5 text-center mx-2";
+    tarjetaDeContactos.classList = "col-sm-6 col-md-4 col-lg-3 card mb-5 text-center mx-2 border-dark cardDark ";
 
 
     const tarjetaImagen = document.createElement('img');

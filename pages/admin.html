@@ -25,6 +25,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/login.css">
   </head>
   <body>
     <header>
@@ -52,6 +53,11 @@
                   >Admin</a
                 >
               </li>
+              <li>
+                <button type="button" id="btnDark" class="btn btn-outline-dark fw-medium">
+                  
+                </button>
+              </li>
               <li class="nav-item ms-md-auto">
                 <button class="nav-link  text-danger d-none" id="boton-salir">
                   Salir
@@ -65,7 +71,7 @@
     <main class="container my-4">
       <h1>Cargar contacto</h1>
       <hr />
-      <section class="bg-secondary p-3 rounded text-light">
+      <section id="sectionFormulario" class="bg-secondary p-3 rounded text-light">
         <form id="form-contacto">
           <fieldset class="mb-2">
             <label for="input-nombre" class="form-label">Nombre</label>
@@ -151,5 +157,6 @@
     </footer>
     <script type="module" src="../js/admin/app.js"></script>
     <script type="module" src="../js/logout.js"></script>
+    <script src="../js/darkMode/adminDark.js"></script>
   </body>
 </html>

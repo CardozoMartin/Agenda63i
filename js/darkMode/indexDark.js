@@ -2,15 +2,15 @@ const btnDark = document.getElementById('btnDark');
 const body = document.querySelector('body')
 const nav = document.querySelector('nav')
 const a = document.querySelectorAll('a')
-const h1 = document.getElementById('bienvenidoH1')
-const h1mobil = document.querySelector('h1')
-const p = document.querySelectorAll('p')
-const h2 = document.querySelector('h2')
 const label = document.querySelectorAll('label')
-const articleDeInicio = document.getElementById("DeInicio");
-const btnSesion =document.getElementById('btnSesion')
 const footer = document.querySelector('footer')
-const titleAdmin = document.querySelector('h1')
+const sectioMsj = document.querySelector('section')
+const h1mensaje = document.querySelector('h1')
+const btnMsj = document.getElementById('btnMsj')
+const cardContactoDark = document.querySelector('.cardDark')
+
+
+
 
 // Verifica si hay una preferencia de dark mode guardada en el localStorage
 const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -19,44 +19,26 @@ const isDarkMode = localStorage.getItem('darkMode') === 'true';
 if (isDarkMode) {
 
   body.classList.add('darkMode');
-  nav.classList.add('navDark');
   
-  
-  a.forEach((a) => {
-    a.classList.add('text-light');
-  });
-  h1.classList.add('text-light');
-  p.forEach((p) => {
-    p.classList.add('text-light');
-  });
-  label.forEach((lab) => {
-    lab.classList.add('twhite');
-  });
-  h2.classList.add('text-light');
-  articleDeInicio.classList.add('inicioDark');
-  footer.classList.add("bg-dark");
 }
 
 btnDark.addEventListener('click', (e) => {
-  // Cambia el modo oscuro
-  body.classList.toggle('darkMode');
-  nav.classList.toggle('navDark');
-  a.forEach((a) => {
+ body.classList.toggle('darkMode');
+ nav.classList.toggle('navDark')
+ 
+ a.forEach((a) => {
     a.classList.toggle('text-light');
   });
-  h1.classList.toggle('text-light');
-  p.forEach((p) => {
-    p.classList.toggle('text-light');
-  });
-  label.forEach((lab) => {
-    lab.classList.toggle('twhite');
-  });
-  h2.classList.toggle('text-light');
-  articleDeInicio.classList.toggle('inicioDark');
-  btnSesion.classList.toggle('btnColor')
-  h1mobil.classList.toggle('text-white')
-  footer.classList.toggle("bg-dark");
-  titleAdmin.classList.toggle('twhite')
+ sectioMsj.classList.toggle('sectioMsjDark')
+ h1mensaje.classList.toggle('text-white')
+ label.forEach((lab)=>{
+    lab.classList.toggle('text-white')
+ })
+ btnMsj.classList.toggle('btnDarkMsj')
+
+ 
+ 
+ footer.classList.toggle("bg-dark");
 
 
   // Guarda la preferencia de modo oscuro en el localStorage
@@ -84,3 +66,4 @@ function toggleDarkMode() {
   
   toggleDarkMode();
 
+ 
