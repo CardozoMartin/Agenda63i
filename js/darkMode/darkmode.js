@@ -12,11 +12,11 @@ const btnSesion =document.getElementById('btnSesion')
 const footer = document.querySelector('footer')
 const titleAdmin = document.querySelector('h1')
 
-// Verifica si hay una preferencia de dark mode guardada en el localStorage
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-// Aplica el modo oscuro si está activo
-if (isDarkMode) {
+const darkMode = localStorage.getItem('darkMode') === 'true';
+
+
+if (darkMode) {
 
   body.classList.add('darkMode');
   nav.classList.add('navDark');
@@ -38,7 +38,7 @@ if (isDarkMode) {
 }
 
 btnDark.addEventListener('click', (e) => {
-  // Cambia el modo oscuro
+  
   body.classList.toggle('darkMode');
   nav.classList.toggle('navDark');
   a.forEach((a) => {
@@ -59,26 +59,26 @@ btnDark.addEventListener('click', (e) => {
   titleAdmin.classList.toggle('twhite')
 
 
-  // Guarda la preferencia de modo oscuro en el localStorage
-  const isDarkModeActive = body.classList.contains('darkMode');
-  btnDark.textContent = isDarkModeActive ? 'Modo Claro' : 'Modo Oscuro';
-  btnDark.classList.toggle('btn-outline-light', isDarkModeActive);
-  btnDark.classList.toggle('btn-outline-dark', !isDarkModeActive);
-  localStorage.setItem('darkMode', isDarkModeActive.toString());
+ 
+  const darkModeActivado = body.classList.contains('darkMode');
+  btnDark.textContent = darkModeActivado ? 'Modo Claro' : 'Modo Oscuro';
+  btnDark.classList.toggle('btn-outline-light', darkModeActivado);
+  btnDark.classList.toggle('btn-outline-dark', !darkModeActivado);
+  localStorage.setItem('darkMode', darkModeActivado.toString());
 });
 
 function toggleDarkMode() {
     
   
-    // Cambia el texto del botón según el nuevo estado del modo oscuro
-    const isDarkModeActive = body.classList.contains('darkMode');
-    btnDark.textContent = isDarkModeActive ? 'Modo Claro' : 'Modo Oscuro';
+    
+    const darkModeActivado = body.classList.contains('darkMode');
+    btnDark.textContent = darkModeActivado ? 'Modo Claro' : 'Modo Oscuro';
   
-    // Guarda la preferencia de modo oscuro en el localStorage
-    localStorage.setItem('darkMode', isDarkModeActive.toString());
+  
+    localStorage.setItem('darkMode', darkModeActivado.toString());
   }
   
-  // Asigna el evento click al botón
+  
   btnDark.addEventListener('click', toggleDarkMode);
   
   

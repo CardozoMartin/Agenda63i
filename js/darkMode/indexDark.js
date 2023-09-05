@@ -12,11 +12,11 @@ const cardContactoDark = document.querySelector('.cardDark')
 
 
 
-// Verifica si hay una preferencia de dark mode guardada en el localStorage
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-// Aplica el modo oscuro si está activo
-if (isDarkMode) {
+const darkModo = localStorage.getItem('darkMode') === 'true';
+
+
+if (darkModo) {
 
   body.classList.add('darkMode');
   
@@ -35,35 +35,36 @@ btnDark.addEventListener('click', (e) => {
     lab.classList.toggle('text-white')
  })
  btnMsj.classList.toggle('btnDarkMsj')
-
+ cardContactoDark.classList.toggle('text-bg-dark')
  
  
  footer.classList.toggle("bg-dark");
 
 
-  // Guarda la preferencia de modo oscuro en el localStorage
-  const isDarkModeActive = body.classList.contains('darkMode');
-  btnDark.textContent = isDarkModeActive ? 'Modo Claro' : 'Modo Oscuro';
-  btnDark.classList.toggle('btn-outline-light', isDarkModeActive);
-  btnDark.classList.toggle('btn-outline-dark', !isDarkModeActive);
-  localStorage.setItem('darkMode', isDarkModeActive.toString());
+
+  const darkModoActivado = body.classList.contains('darkMode');
+  btnDark.textContent = darkModoActivado ? 'Modo Claro' : 'Modo Oscuro';
+  btnDark.classList.toggle('btn-outline-light', darkModoActivado);
+  btnDark.classList.toggle('btn-outline-dark', !darkModoActivado);
+  localStorage.setItem('darkMode', darkModoActivado.toString());
 });
 
 function toggleDarkMode() {
     
   
-    // Cambia el texto del botón según el nuevo estado del modo oscuro
-    const isDarkModeActive = body.classList.contains('darkMode');
-    btnDark.textContent = isDarkModeActive ? 'Modo Claro' : 'Modo Oscuro';
   
-    // Guarda la preferencia de modo oscuro en el localStorage
-    localStorage.setItem('darkMode', isDarkModeActive.toString());
+    const darkModoActivado = body.classList.contains('darkMode');
+    btnDark.textContent = darkModoActivado ? 'Modo Claro' : 'Modo Oscuro';
+  
+    
+    localStorage.setItem('darkMode', darkModoActivado.toString());
   }
   
-  // Asigna el evento click al botón
+  
   btnDark.addEventListener('click', toggleDarkMode);
   
   
   toggleDarkMode();
 
- 
+
+
